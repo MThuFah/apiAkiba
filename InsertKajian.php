@@ -64,11 +64,8 @@ include 'koneksi.php' ;
                 'app_id' => $appid,
                 'included_segments' => "Active Users",
                 'data' => array("foo" => "bar"),
-                "icon" => "https://pinjamaja.com/assets/images/favicon.png",
-                "headings" => ["en" => "Assalamu Alaikum"],
-                "small_icon" => "https://pinjamaja.com/assets/images/favicon.png",
+                 "headings" => ["en" => "Assalamu Alaikum"],
                 'contents' => $content,
-                "url" => "url", // bgmn caranya kalau di klik notifikasinya, aplikasinya yang terbuka kak?
                 "send_after" => $tanggals.":00 GMT+8",
                 "filters" => array(["field" => "tag","key" => "reminder", "relation" => "=", "value"=>"on"])
             );
@@ -80,11 +77,8 @@ include 'koneksi.php' ;
                 'app_id' => $appid,
                 'included_segments' => "Active Users",
                 'data' => array("foo" => "bar"),
-                "icon" => "https://pinjamaja.com/assets/images/favicon.png",
                 "headings" => ["en" => "Assalamu Alaikum"],
-                "small_icon" => "https://pinjamaja.com/assets/images/favicon.png",
-                'contents' => $content2,
-                "url" => "url"
+                'contents' => $content2 
             );
 
 
