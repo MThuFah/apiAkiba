@@ -34,6 +34,7 @@ include 'koneksi.php' ;
 		  // noting work upload di github mu
 		  // nd mampu kuotaku kak.. besok mami wkwknda bnyak huada
 		  //ini saya tambah
+		  //pake ini supaya nda minta password terus : git config credential.helper store 
 
 		  $waktu = $waktus[0].":".$waktus[1];
 		  $waktus[0] =  $waktus[0] - 2;
