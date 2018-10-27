@@ -26,6 +26,14 @@ include 'koneksi.php' ;
 		  		$waktus[0]="0".$waktus[0];
 		  }
 		  //maksud ku toh itu yg mines 2 mau kw save di db mu ataukah data real ? data realmo kak.. 
+		  // sebelum di tambah 0 kayaknya kak? nd kah?
+		  //cocok mi itu
+		  //coba mi d andoid
+		  // ku coba 23:22, berarti harusnya masuk 21:22
+		  // tp nd munculki notif setiap sdh uploadku haha
+		  // noting work upload di github mu
+		  // nd mampu kuotaku kak.. besok mami wkwknda bnyak huada
+		  //ini saya tambah
 
 		  $waktu = $waktus[0].":".$waktus[1];
 		  $waktus[0] =  $waktus[0] - 2;
