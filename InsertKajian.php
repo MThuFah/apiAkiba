@@ -27,7 +27,7 @@ include 'koneksi.php' ;
 		  }
 
 		  if (strlen($waktus[1])==1){
-		  		$waktus[1]="".$waktus[1];
+		  		$waktus[1]="0".$waktus[1];
 		  }
 
 		  if ($waktus[0]==00){
