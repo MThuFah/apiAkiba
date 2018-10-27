@@ -25,16 +25,14 @@ include 'koneksi.php' ;
 		  if (strlen($waktus[0])==1){
 		  		$waktus[0]="0".$waktus[0];
 		  }
-		  //maksud ku toh itu yg mines 2 mau kw save di db mu ataukah data real ? data realmo kak.. 
-		  // sebelum di tambah 0 kayaknya kak? nd kah?
-		  //cocok mi itu
-		  //coba mi d andoid
-		  // ku coba 23:22, berarti harusnya masuk 21:22
-		  // tp nd munculki notif setiap sdh uploadku haha
-		  // noting work upload di github mu
-		  // nd mampu kuotaku kak.. besok mami wkwknda bnyak huada
-		  //ini saya ubah
-		  //pake ini supaya nda minta password terus : git config credential.helper store 
+
+		  if (strlen($waktus[1])==1){
+		  		$waktus[1]="".$waktus[1];
+		  }
+
+		  if ($waktus[0]==00){
+		  	$waktus[0]=24;
+		  }
 
 		  $waktu = $waktus[0].":".$waktus[1];
 		  $waktus[0] =  $waktus[0] - 2;
@@ -57,20 +55,12 @@ include 'koneksi.php' ;
         $appid = '293ce55d-3f73-4f8b-9c59-340520caa82c';
         $authorization = 'MjQ3ZjRjOGMtZThmNS00NDRkLThlMDYtNGQzZDQxNDkwYTRh';
 
-
-    //      $waktus = explode(':',$waktu);
-  
-		  // if (strlen($waktus[0])==1){
-		  // 		$waktus[0]="0".$waktus[0]
-		  // }
-		  
-		  // $waktu = $waktus[0].":".$waktus[1]; coba mi, yg reminder biasa nd muncul jg kak liat ki errornya
-
-		  //       //echo $support." ".$waktu; banyak dudu di input bela haha
-     //kalau nda bg2 nda nu tau errornya apa. karna di android itu nda ada pesan error dri server
 		        $tanggals = $support." ".$waktureminder;
 		        
-            $fields = array( 
+      	
+		 //Notifikasi Reminder
+
+      	    $fields = array( 
                 'app_id' => $appid,
                 'included_segments' => "Active Users",
                 'data' => array("foo" => "bar"),
@@ -78,13 +68,13 @@ include 'koneksi.php' ;
                 "headings" => ["en" => "Assalamu Alaikum"],
                 "small_icon" => "https://pinjamaja.com/assets/images/favicon.png",
                 'contents' => $content,
-                "url" => "url",
+                "url" => "url", // bgmn caranya kalau di klik notifikasinya, aplikasinya yang terbuka kak?
                 "send_after" => $tanggals.":00 GMT+8",
                 "filters" => array(["field" => "tag","key" => "reminder", "relation" => "=", "value"=>"on"])
             );
-//kenapa sama fariabelnya itu ? yg terakhir itu na ambil
-// baruka nyadar wkwk mau kw apa buat 2 kah ?
-            // wait kak nda masuk lagi datanya, ada kesalahan tanggal bd
+
+
+      	 //Notifikasi Setiap Upload Kajian Islam baru
 
              $fields2 = array( 
                 'app_id' => $appid,
@@ -95,7 +85,6 @@ include 'koneksi.php' ;
                 "small_icon" => "https://pinjamaja.com/assets/images/favicon.png",
                 'contents' => $content2,
                 "url" => "url"
-                //"send_after" => $tanggals.":00 GMT+8"
             );
 
 
