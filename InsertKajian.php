@@ -33,7 +33,7 @@ include 'koneksi.php' ;
 		  // tp nd munculki notif setiap sdh uploadku haha
 		  // noting work upload di github mu
 		  // nd mampu kuotaku kak.. besok mami wkwknda bnyak huada
-		  //ini saya tambah
+		  //ini saya ubah
 		  //pake ini supaya nda minta password terus : git config credential.helper store 
 
 		  $waktu = $waktus[0].":".$waktus[1];
